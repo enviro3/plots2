@@ -1,3 +1,5 @@
+# Although for my contributions I did not make any changes to this file, it is important to note that this is the controller for comments with methods communicating between the comment model and and view.
+
 class CommentController < ApplicationController
   include CommentHelper
 

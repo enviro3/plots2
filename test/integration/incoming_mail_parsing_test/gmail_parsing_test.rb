@@ -1,3 +1,5 @@
+# This is an important file to note since this is where a test needs to be added to test auto reply emails once a comment is created! Action required here for my contribution
+
 require 'test_helper'
 class GmailParsingTest < ActionDispatch::IntegrationTest
   test 'should parse incoming mail from gmail service correctly and add comment' do

@@ -1,3 +1,5 @@
+#This is the model comment class where the comments for posts are affiliated with the database and communicate with the comment controller. The most important methods in relation to the issue I tackled was "self.receive_mail" and "self.add_comment" since these methods related to the mailer and to emails recieved once a comment was made.
+
 class Comment < ApplicationRecord
   include CommentsShared
   extend RawStats

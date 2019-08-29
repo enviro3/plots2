@@ -1,3 +1,5 @@
+# I did not need to use this file directly but important to note that this file defines many of the functionality of users (admin, user etc.) and functionality of the site.
+
 include ActionView::Helpers::DateHelper # required for time_ago_in_words()
 class ApplicationController < ActionController::Base
   protect_from_forgery

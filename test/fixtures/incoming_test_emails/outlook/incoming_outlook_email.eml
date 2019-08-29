@@ -1,5 +1,7 @@
+--Important to note that a file very similar to this one will need to be added for my contribution to test auto reply emails
+
 Return-Path: <pl.usertest@outlook.com>
-Received: by 2002:a6b:ce09:0:0:0:0:0 with SMTP id p9csp451442iob;=0D=0A       
+Received: by 2002:a6b:ce09:0:0:0:0:0 with SMTP id p9csp451442iob;=0D=0A
  Wed, 12 Dec 2018 20:43:58 -0800 (PST)
 Received: from NAM05-DM3-obe.outbound.protection.outlook.com (mail-oln040092014045.outbound.protection.outlook.com. [40.92.14.45])        by mx.google.com with ESMTPS id s11si727376pgi.324.2018.12.12.20.43.57        for <pl.kevinzluo@gmail.com>        (version=TLS1_2 cipher=ECDHE-RSA-AES128-SHA bits=128/128); Wed, 12 Dec 2018 20:43:58 -0800
 Received: from CO1NAM05FT046.eop-nam05.prod.protection.outlook.com (10.152.96.54) by CO1NAM05HT198.eop-nam05.prod.protection.outlook.com (10.152.97.144) with Microsoft SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384) id 15.20.1446.5; Thu, 13 Dec 2018 04:43:56 +0000
@@ -22,23 +24,23 @@ X-Received: by 2002:a65:5a8e:: with SMTP id
  c14mr20388452pgt.137.1544676238140;        Wed, 12 Dec 2018 20:43:58 -0800
  (PST)
 ARC-Seal: i=1; a=rsa-sha256; t=1544676238; cv=none;        d=google.com;
- s=arc-20160816;       
- b=eilSWd4AfHYASN6In3kUbS3ED0FGUR/d8DNf91mkbJuA4586GQ4vU/tZPua1b48uon        
- ygheVEnTXe9bmQCAyaaNzni599YTjLmYmfEAKfUKG0+00rRdtqKfyOdgs0JglHqNCz/o        
- b0M+G5Qym6+p6eAqueTixaITP1z9huLYUo850eINOF5UD2YRCzvkGYPOzoeQ1gn7BaEN        
- vtbKQLNPcLpDrPxSO8DqC5XiBa23ZYIR9//JhYNFJ+t6MEc/6AHgxxIcjgox/dkcRC8x        
- s6aleW7zu/AGABSCRAgzJIrFdzpJ9DlZ28v6v05yME6xV8tTLLOlp3zczMlhyQT9V5Em        
+ s=arc-20160816;
+ b=eilSWd4AfHYASN6In3kUbS3ED0FGUR/d8DNf91mkbJuA4586GQ4vU/tZPua1b48uon
+ ygheVEnTXe9bmQCAyaaNzni599YTjLmYmfEAKfUKG0+00rRdtqKfyOdgs0JglHqNCz/o
+ b0M+G5Qym6+p6eAqueTixaITP1z9huLYUo850eINOF5UD2YRCzvkGYPOzoeQ1gn7BaEN
+ vtbKQLNPcLpDrPxSO8DqC5XiBa23ZYIR9//JhYNFJ+t6MEc/6AHgxxIcjgox/dkcRC8x
+ s6aleW7zu/AGABSCRAgzJIrFdzpJ9DlZ28v6v05yME6xV8tTLLOlp3zczMlhyQT9V5Em
  i/Mw==
 ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com;
- s=arc-20160816;       
- h=mime-version:content-language:accept-language:in-reply-to        
- :references:message-id:date:thread-index:thread-topic:subject:to        
- :from:dkim-signature;        bh=cSfy/P8ZFKRvny7oi3zR0YvUurm8DTZkISd1W3tk9VQ=; 
-       b=tulCgNIv+1tCGFfq9S8LRaC6ndfbOxcS7zjwaMNOMnONi3zEmTbM/RsC2yG5xwxmnK    
-     c5ftdpSAMWcs3IjBqkMOU347sirzIGdyowmrZOzoSr3Tv36cI93f+hCRdjKlPwxRGaNG      
-   iFiOdjmqMzBQ4Gvu14QiosVZqgNgb84dGEvGS1O8iB0p0tm1lDfXoslmmUe71eNesHf8        
- 9WPd6xMAuOwCEb11NPK0HbeCH4UI/E/+jDFkHc1UHPgMUvgwRvtnlBfDEbjGVpptO6/r        
- fmcT9umqone86POdC4rI0+WIQth1j0ikL/+IDEsY81y7eo3cyeJnn/dRbVRI1MzEhSn9        
+ s=arc-20160816;
+ h=mime-version:content-language:accept-language:in-reply-to
+ :references:message-id:date:thread-index:thread-topic:subject:to
+ :from:dkim-signature;        bh=cSfy/P8ZFKRvny7oi3zR0YvUurm8DTZkISd1W3tk9VQ=;
+       b=tulCgNIv+1tCGFfq9S8LRaC6ndfbOxcS7zjwaMNOMnONi3zEmTbM/RsC2yG5xwxmnK
+     c5ftdpSAMWcs3IjBqkMOU347sirzIGdyowmrZOzoSr3Tv36cI93f+hCRdjKlPwxRGaNG
+   iFiOdjmqMzBQ4Gvu14QiosVZqgNgb84dGEvGS1O8iB0p0tm1lDfXoslmmUe71eNesHf8
+ 9WPd6xMAuOwCEb11NPK0HbeCH4UI/E/+jDFkHc1UHPgMUvgwRvtnlBfDEbjGVpptO6/r
+ fmcT9umqone86POdC4rI0+WIQth1j0ikL/+IDEsY81y7eo3cyeJnn/dRbVRI1MzEhSn9
  0DdA==
 ARC-Authentication-Results: i=1; mx.google.com;       dkim=pass
  header.i=@outlook.com header.s=selector1 header.b=kWd1Mo5u;       spf=pass
@@ -61,8 +63,8 @@ Thread-Topic: (#c1)
 Thread-Index: AQHUkp48CHugBDk6dEyMGAZg2L5bDKV8F1opgAAAR1w=
 Accept-Language: en-US
 Content-Language: en-US
-X-MS-Has-Attach: 
-X-MS-TNEF-Correlator: 
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
 x-incomingtopheadermarker: OriginalChecksum:AAC45E70F13F3F18E35792CDE67E01988FE2343BDD5AA11B335884CD72060C5C;UpperCasedChecksum:5BF61DCC16FF2664835455159CDDC9EF09FB08BF78D5E9DC05F5BB5B638B1549;SizeAsReceived:7152;Count:45
 x-tmn: [4Lgv8AIluPNE999K2+l1K7vwBDBLL/euF75k7smS1mK7e3y1I9ZQ/nfGQVffnB83ldRcUcAyHlA=]
 x-ms-publictraffictype: Email
